@@ -17,9 +17,9 @@
         </div>
         
         <div class = "row p-5">
-            <div class = "col">
-                <table class = "table card">
-                    <caption>Datos Personales</caption>
+            <div class = "col card p-3">
+                <h5>Datos Personales</h5>
+                <table class = "table">
                     <thead>
                     </thead>
                     <tbody>
@@ -46,44 +46,34 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col">
-                <h2>Cursos Actuales</h2>
-                <table class = "card">
-                    <thead>
-                        <tr>
-                            <th>Curso</th>
-                            <th>Profesor</th>
-                        </tr>
+            <div class="col card p-3">
+                <h5>Cursos Actuales</h5>
+                <form style="margin:10px;">
+                    <div class="form-row">
+                      <div class="col">
+                          <input type="text" class="form-control" id="search-box" placeholder="Filtrar por nombre">
+                      </div>
+                      <div class="col">
+                          <button type="button" id="button-filterByName" class="btn btn-success">Aplicar</button>
+                      </div>
+                    </div>
+                </form>
+                <table class="table">
+                    <thead class="thead-dark">
+                       <tr>
+                          <th>Curso</th>
+                          <th>Profesor</th>
+                          <th>Créditos</th>
+                       </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Desarrollo de SW en equipo</td>
-                            <td>Cesar Forero</td>
-                        </tr>
-                        <tr>
-                            <td>TI en las organizaciones</td>
-                            <td>Cindy Otalora</td>
-                        </tr>
-                        <tr>
-                            <td>Diseño y Analisis de Algoritmos</td>
-                            <td>Ruben Manrique</td>
-                        </tr>
-                        <tr>
-                            <td>Calculo Vectorial</td>
-                            <td>Jairo Angel</td>
-                        </tr>
-                        <tr>
-                            <td>Sistemas Transaccionales</td>
-                            <td>German Bravo</td>
-                        </tr>
-                        <tr>
-                            <td>Biología Celular</td>
-                            <td>Jesus Uribe</td>
-                        </tr>
+                    <tbody id="courses">
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+    <script type="module" src="./scripts/course.js" ></script>
+    <script type="module" src="./scripts/dataCourses.js" ></script>
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>
